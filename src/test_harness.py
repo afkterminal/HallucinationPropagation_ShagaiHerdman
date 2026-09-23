@@ -365,7 +365,7 @@ class IterationTestHarness:
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(report, f, indent=2)
 
-        print(f"✓ Report saved: {filename}")
+        print(f"Report saved: {filename}")
         return filename
 
     def print_summary(self):
@@ -382,5 +382,5 @@ class IterationTestHarness:
         print(f"Persistence rate: {report['overall_persistence_rate']:.2%}")
         print("\nHallucinations by type:")
         for h_type, stats in report['hallucinations_by_type'].items():
-            print(f"  {h_type:12} → {stats['persisting']:2}/{stats['count']:2} persisting")
+            print(f"  {h_type:12} -> {stats['persisting']:2}/{stats['count']:2} persisting")
         print("\n" + "="*60 + "\n")
